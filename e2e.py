@@ -8,8 +8,8 @@ from os import getcwd
 
 target_url = 'http://127.0.0.1:5050'
 proxies = {
-    'http': 'http://127.0.0.1:8090',
-    'https': 'http://127.0.0.1:8090',
+    'http': 'http://127.0.0.1:8070',
+    'https': 'http://127.0.0.1:8070',
 }
 
 auth_dict = {'username': 'admin', 'password': 'admin123'}
@@ -51,8 +51,8 @@ if login.status_code == 200:  # if login is successful
 
 # ZAP Operations
 
-zap = ZAP(proxies={'http': 'http://127.0.0.1:8090',
-                   'https': 'http://127.0.0.1:8090'})
+zap = ZAP(proxies={'http': 'http://127.0.0.1:8070',
+                   'https': 'http://127.0.0.1:8070'})
 
 if 'Light' not in zap.ascan.scan_policy_names:
     print("Adding scan policies")
