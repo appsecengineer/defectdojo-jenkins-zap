@@ -75,4 +75,8 @@ f = open("report.html", "x")
 f.write(zap.core.htmlreport())
 f.close()
 
+f = open("report.json", "x")
+f.write(zap.core.jsonreport())
+f.close()
+
 zap.core.shutdown()
