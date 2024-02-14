@@ -79,4 +79,8 @@ f = open("report.json", "x")
 f.write(zap.core.jsonreport())
 f.close()
 
+f = open("report.xml", "x")
+f.write(zap.core.xmlreport())
+f.close()
+
 zap.core.shutdown()
